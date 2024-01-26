@@ -42,7 +42,7 @@ public class Subscribe {
 	@ManyToOne
 	private User fromUser;
 	
-	@JoinColumn(name = "ToUserId")
+	@JoinColumn(name = "toUserId")
 	@ManyToOne
 	private User toUser;
 	

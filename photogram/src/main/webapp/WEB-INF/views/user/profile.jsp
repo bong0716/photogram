@@ -43,6 +43,8 @@
 									onclick="toggleSubscribe(${dto.user.id}, this)">구독하기</button>
 							</c:otherwise>
 						</c:choose>
+
+
 					</c:otherwise>
 				</c:choose>
 
@@ -128,10 +130,7 @@
 			</button>
 		</div>
 
-		<div class="subscribe-list" id="subscribeModalList">
-		
-		
-		</div>
+		<div class="subscribe-list" id="subscribeModalList"></div>
 	</div>
 
 </div>

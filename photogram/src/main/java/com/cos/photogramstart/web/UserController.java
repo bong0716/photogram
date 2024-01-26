@@ -18,7 +18,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @Controller
 public class UserController {
-
+	
 	private final UserService userService;
 	
 	@GetMapping("/user/{pageUserId}")
@@ -29,15 +29,17 @@ public class UserController {
 	}
 	
 	@GetMapping("/user/{id}/update")
-	public String update(@PathVariable int id, @AuthenticationPrincipal PrincipalDetails principalDetails) {
-		// 1. 추전
-		//System.out.println("세션정보 : " + principalDetails.getUser());
+	public String updateForm(@PathVariable int id, @AuthenticationPrincipal PrincipalDetails principalDetails) {
+		// 1. 추천
+		//System.out.println("세션 정보 : "+principalDetails.getUser());
 		
 		// 2. 극혐
-		//Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-		//PrincipalDetails mPrincipalDetails = (PrincipalDetails)auth.getPrincipal();
-		//System.out.println("직접 찾은 세션 정보 : " + mPrincipalDetails.getUser());
-		
+		//Authentication auth =   SecurityContextHolder.getContext().getAuthentication();
+		//PrincipalDetails mPrincipalDetails = (PrincipalDetails) auth.getPrincipal();
+		//System.out.println("직접 찾은 세션 정보 : "+mPrincipalDetails.getUser());
+	
 		return "user/update";
 	}
+
+
 }
